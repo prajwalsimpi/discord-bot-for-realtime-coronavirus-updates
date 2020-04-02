@@ -14,6 +14,10 @@ bot = commands.Bot(command_prefix='!')
 
 def to_update(argument):
     cname = argument.title()
+    if cname == 'Japan':
+        cname = 'Japan (+Diamond Princess)'
+    if cname == 'Czech Republic':
+        cname = 'Czech Republic (Czechia)'
     source = requests.get('https://www.worldometers.info/coronavirus/countries-where-coronavirus-has-spread/').text
 
     soup = BeautifulSoup(source,'lxml')
