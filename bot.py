@@ -32,6 +32,7 @@ def to_update(argument):
         deaths = td[2].text
         data_dictionary[country] = [cases,deaths]
     res = f'Country : {cname} \nCases : {str(data_dictionary[cname][0])} \nDeaths : {str(data_dictionary[cname][1])}' 
+    print(res)
     return res
 
 @bot.command(help="To use update command type <!><update><space><Country Name> to get the latest cases reported in the country that you specify")
@@ -42,6 +43,7 @@ async def update(ctx, *, content: to_update):
 async def online_check(ctx):
     response = f'beep boop hey there!!'
     await ctx.send(response)
+    print(response)
 
 
 bot.run(TOKEN)
