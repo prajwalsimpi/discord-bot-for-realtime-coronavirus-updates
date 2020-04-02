@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 from discord.ext import commands
 from bs4 import BeautifulSoup
 import requests
-import random
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
